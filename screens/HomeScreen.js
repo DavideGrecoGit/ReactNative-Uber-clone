@@ -7,9 +7,6 @@ import { GOOGLE_MAPS_APIKEY } from "@env";
 import { useDispatch } from "react-redux";
 import { setDestination, setOrigin } from "../slices/navSlice";
 
-import { useSelector } from "react-redux";
-import { selectOrigin } from "../slices/navSlice";
-
 const HomeScreen = () => {
   const dispatch = useDispatch();
 
@@ -51,7 +48,7 @@ const HomeScreen = () => {
               language: "en",
             }}
             nearbyPlacesAPI="GooglePlacesSearch"
-            debounce={400}
+            debounce={200}
           />
         </View>
 

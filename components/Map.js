@@ -5,7 +5,7 @@ import tw from "tailwind-react-native-classnames";
 import { useSelector } from "react-redux";
 import { selectOrigin } from "../slices/navSlice";
 
-export default function Map() {
+const Map = () => {
   const origin = useSelector(selectOrigin);
   return (
     <MapView
@@ -31,4 +31,6 @@ export default function Map() {
       )}
     </MapView>
   );
-}
+};
+
+export default Map;
