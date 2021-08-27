@@ -44,9 +44,9 @@ const NavFavourites = () => {
       <FlatList
         style={tw`px-6`}
         data={
-          (route.name !== "HomeScreen" &&
-            data.filter((fav) => fav.description !== origin?.description)) ||
-          data
+          route.name !== "HomeScreen"
+            ? data.filter((fav) => fav.description !== origin?.description)
+            : data
         }
         keyExtractor={(item) => item.id}
         renderItem={({ item: { label, description, location, icon } }) => (
