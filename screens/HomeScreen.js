@@ -24,7 +24,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView>
       <NavOptions />
-      <View style={tw`p-5 h-full bg-gray-300`}>
+      <View style={tw`p-5 h-full bg-gray-200`}>
         <View style={tw`p-2 w-full`}>
           <GooglePlacesAutocomplete
             placeholder={"Where from?"}

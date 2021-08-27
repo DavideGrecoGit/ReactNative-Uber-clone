@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, View, Text } from "react-native";
+import { SafeAreaView, View, TouchableOpacity } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import Map from "../components/Map";
 import NavigateCard from "../components/NavigateCard";

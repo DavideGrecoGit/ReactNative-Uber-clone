@@ -19,7 +19,7 @@ const NavOptions = () => {
         style={tw`flex-row items-center justify-around border-gray-800 border-b-2`}
       >
         <TouchableOpacity
-          style={tw`flex flex-row bg-gray-800 pb-2 pt-3 px-4 items-center rounded-t-full shadow-xl `}
+          style={tw`flex flex-row bg-gray-800 pb-2 pt-3 px-4 items-center rounded-t-xl shadow-xl `}
         >
           <Icon name="car" type="ionicon" color="white" size={16} />
           <Text style={tw`ml-1 text-white`}>Rides</Text>
