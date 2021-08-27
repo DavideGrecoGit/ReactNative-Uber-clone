@@ -53,8 +53,6 @@ const NavFavourites = () => {
           <TouchableOpacity
             style={tw`flex-row items-center rounded-full bg-white mb-2 p-2`}
             onPress={() => {
-              console.log(route.name);
-
               if (route.name === "HomeScreen") {
                 dispatch(
                   setOrigin({
