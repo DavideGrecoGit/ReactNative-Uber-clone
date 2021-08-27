@@ -1,5 +1,6 @@
 import tw from "tailwind-react-native-classnames";
 import React, { useState } from "react";
+
 import {
   SafeAreaView,
   View,
@@ -34,6 +35,8 @@ const data = [
   },
 ];
 
+const SURGE_CHARGE_RATE = 1.5;
+
 const RideOptionsCard = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
@@ -59,7 +62,7 @@ const RideOptionsCard = () => {
         renderItem={({ item: { id, multiplier, image, title }, item }) => (
           <TouchableOpacity
             onPress={() => setSelected(item)}
-            style={tw`flex-row bg-white justify-between items-center px-10 ${
+            style={tw`flex-row bg-white justify-around items-center px-10 ${
               id === selected?.id && "bg-gray-200"
             }`}
           >
@@ -71,11 +74,20 @@ const RideOptionsCard = () => {
               }}
               source={{ uri: image }}
             />
-            <View style={tw`flex-col items-start justify-center`}>
+
+            <View>
               <Text style={tw`text-lg font-semibold`}>{title}</Text>
               <Text>{travelTimeInformation?.duration.text}</Text>
             </View>
-            <Text style={tw`text-lg`}>£Price</Text>
+            <Text style={tw`text-lg`}>
+              £
+              {(
+                (travelTimeInformation?.duration.value *
+                  SURGE_CHARGE_RATE *
+                  multiplier) /
+                100
+              ).toFixed(2)}
+            </Text>
           </TouchableOpacity>
         )}
       />
