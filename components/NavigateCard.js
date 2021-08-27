@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, View, Text } from "react-native";
+import { SafeAreaView, View, TouchableOpacity, Text } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import { GOOGLE_MAPS_APIKEY } from "@env";
@@ -15,7 +15,7 @@ const NavigateCard = () => {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView style={tw`bg-gray-300 flex-1`}>
+    <SafeAreaView style={tw`flex-1 bg-gray-300`}>
       <View style={tw`my-6 px-8 w-full`}>
         <GooglePlacesAutocomplete
           placeholder="Where To?"

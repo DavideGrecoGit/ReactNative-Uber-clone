@@ -29,6 +29,16 @@ const data = [
     },
     description: "London Eye, London, UK",
   },
+  {
+    id: "9",
+    icon: "school",
+    label: "Library",
+    location: {
+      lat: 51.4995,
+      lng: -0.1034399,
+    },
+    description: "Library Street, London, UK",
+  },
 ];
 
 const NavFavourites = () => {
@@ -77,7 +87,7 @@ const NavFavourites = () => {
             }}
           >
             <Icon
-              style={tw`mr-4 rounded-full bg-gray-400 p-2`}
+              style={tw`mr-4 rounded-full bg-gray-500 p-2`}
               name={icon}
               type="ionicon"
               color="white"

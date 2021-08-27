@@ -10,12 +10,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 const MapScreen = () => {
   const Stack = createStackNavigator();
   return (
-    <SafeAreaView style={tw`bg-white h-full`}>
+    <SafeAreaView style={tw` bg-white h-full`}>
       <View style={tw`h-1/2`}>
         <Map />
       </View>
 
-      <View style={tw`h-1/2`}>
+      <View style={tw`h-1/2 border-t-2 border-gray-800`}>
         <Stack.Navigator>
           <Stack.Screen
             name="NavigateCard"

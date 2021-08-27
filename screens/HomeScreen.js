@@ -1,8 +1,15 @@
 import React from "react";
-import { View, Text, SafeAreaView, Image } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import tw from "tailwind-react-native-classnames";
 import NavOptions from "../components/NavOptions";
 import NavFavourites from "../components/NavFavourites";
+import { Icon } from "react-native-elements";
 
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import { GOOGLE_MAPS_APIKEY } from "@env";
@@ -15,15 +22,9 @@ const HomeScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView style={tw`bg-gray-100 h-full`}>
-      <View style={tw`p-5 `}>
-        <Image
-          style={{ width: 100, height: 100, resizeMode: "contain" }}
-          source={{
-            uri: "https://links.papareact.com/gzs",
-          }}
-        />
-
+    <SafeAreaView>
+      <NavOptions />
+      <View style={tw`p-5 h-full bg-gray-300`}>
         <View style={tw`p-2 w-full`}>
           <GooglePlacesAutocomplete
             placeholder={"Where from?"}
@@ -58,7 +59,6 @@ const HomeScreen = () => {
           />
         </View>
         <NavFavourites />
-        <NavOptions />
       </View>
     </SafeAreaView>
   );

@@ -23,7 +23,7 @@ const Map = () => {
     <MapView
       ref={mapRef}
       mapType="mutedStandard"
-      style={tw`w-full h-full m-0 p-0`}
+      style={tw`w-full h-full m-0 p-0 border-t-2 border-gray-800`}
       initialRegion={{
         latitude: origin.location.lat,
         longitude: origin.location.lng,
